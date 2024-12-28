@@ -1,6 +1,3 @@
 [submodule "checkout barang"]
 	path = checkout barang
 	url = https://github.com/AliDhiaus/Ali-Dhiaus.git
-[submodule "kalkulator"]
-	path = kalkulator
-	url = https://github.com/AliDhiaus/Ali-Dhiaus.git
