@@ -1,0 +1,45 @@
+<script setup>
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
+import DeleteUserForm from './Partials/DeleteUserForm.vue';
+import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
+import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
+import { Head, Link } from '@inertiajs/vue3';
+
+defineProps({
+    mustVerifyEmail: Boolean,
+    status: String,
+});
+</script>
+
+<template>
+    <Head title="Profile" />
+    <div class="w-full flex justify-center items-center bg-slate-200">
+        <div class="w-4/5 bg-white p-5">
+            <div class="flex items-center justify-between mb-4">
+                <Link :href="route('dashboard.user')" class="text-blue-500 hover:text-blue-900">
+                    &larr; Back to Dashboard
+                </Link>
+            </div>
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Profile</h2>
+            <div class="py-12">
+                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
+                    <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+                        <UpdateProfileInformationForm
+                            :must-verify-email="mustVerifyEmail"
+                            :status="status"
+                            class="max-w-full"
+                        />
+                    </div>
+        
+                    <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+                        <UpdatePasswordForm class="max-w-full" />
+                    </div>
+        
+                    <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+                        <DeleteUserForm class="max-w-xl" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

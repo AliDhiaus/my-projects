@@ -1,0 +1,610 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.notFound{
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#app{
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.boxLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right top,#051937,#004d7a,#008793,#00bf72,#a8eb12);
+
+    .cardlogin{
+        padding: 20px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+        text-align: center;
+        background-color: white;
+        box-shadow: 0px 1px 10px 5px #998c8c;
+        gap: 20px;
+
+        .judulReset{
+            border-bottom: black solid;
+        }
+
+        .inputan{
+            box-shadow: 0px 1px 5px 0px rgb(152, 107, 107);
+            border: none;
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+        }
+
+        .btnLogin{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .lupaPW{
+            text-align: start;
+            color: blue;
+        }
+    }
+}
+
+nav{
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(15deg, rgb(8, 53, 198) 0%, rgb(8, 53, 198) 50%, rgb(17, 121, 255) 100%);
+    position: fixed;
+    height: 100%;
+    
+    .navbar{
+        padding-top: 20px;
+        text-align: center;
+        border-bottom: white solid;
+        color: white;
+        width: 100%;
+        text-decoration: none;
+        margin-bottom: 20px;
+
+        .logo{
+            width: 100%;
+            height: 86px;
+        }
+    }
+    .linkBar{
+        padding: 10px;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .linkBar:focus{
+        background-color: rgb(5, 5, 92);
+        padding: 10px;
+    }
+}
+
+.content{
+    margin-left: 18%;
+    width: 82%;
+    padding: 20px;
+    position: absolute;
+
+    .head{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .dropdown{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .btnAkun, .btnMenu{
+                background-color: blue;
+            }
+            .dropdown-content{
+                width: 72px;
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                background-color: darkcyan;
+                border-radius: 10px;
+                color: white;
+                font-weight: 500;
+                right: 8;
+                margin-top: 118px;
+                position: absolute;
+            }
+            .isiDropdown:hover{
+                color: navy;
+                border-bottom: navy solid;
+            }
+        }
+        
+    }
+    .boxInputData{
+        margin: 10px 10px 0 0;
+        width: 100%;
+        box-shadow: 0 1px 5px 0 rgb(54, 52, 52);
+        border-radius: 12px;
+        padding: 10px;
+        
+        .form-group{
+            display: flex;
+            padding: 8px 0 8px 0;
+
+            .form-control{
+                width: 100%;
+            }
+        
+            label{
+                width: 15%;
+            }
+        
+            span{
+                width: 1%;
+            }
+        
+            input{
+                width: 85%;
+            }
+            h3{
+                width: 14%;
+            }
+            h4{
+                width: 70%;
+            }
+        }
+
+        .boxBtn{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+.boxCard{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 16px;
+    width: 100%;
+    
+    .card{
+        display: flex;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        width: 100%;
+        height: 200px;
+        gap: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+
+        .imgCard{
+            width: 30%;
+            height: 100%;
+        }
+
+        .boxCardBio{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .cardBio{
+                display: flex;
+                margin: 5px 0 5px 0;
+
+                h3{
+                    width: 40%;
+                }
+                span{
+                    width: 2%;                
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background-color: #0e1133;
+
+    img{
+        height: 50px;
+    }
+    div{
+        padding: 10px;
+        width: 50%;
+
+        h4{
+            color: white;
+        }
+    }
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .boxTambahDas{
+        display: flex;
+        gap: 10px;
+    }
+    .btnIsi{
+        background-color: green;
+    }
+
+    .boxSearch{
+        display: flex;
+        justify-content: center;
+
+        border-radius: 10px;
+        background-color: gray;
+        box-shadow: 0 1px 5px 0 gainsboro;
+
+    }
+    input{
+        padding: 10px;
+        width: 80%;
+        border-radius: 10px 0 0 10px;
+    }
+    .btnSearch{
+        width: 20%;
+        background-color: darkmagenta;
+        padding: 10px;
+        color: white;
+        border-radius: 0 10px 10px 0;
+    }
+    .boxCetak{
+        align-items: center;
+    }
+}
+
+.boxPP{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+
+    img{
+        border: 3px solid white;
+        padding: 5px;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+    }
+
+    .boxBio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+h3, span, h4{
+    font-size: 15px;
+}
+.boxAngka{
+    padding-left: 20px;
+}
+
+.btn, .btnDelete, .btnEdit, .btnIsi, .btnUpdate, .btnMenu, .btnAkun {
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+.btn{
+    background-color: #674188;
+}
+
+.imgBack{
+    height: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.boxBtnIsi{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+
+    .btnEdit{
+        font-size: 18px;
+        width: 5%;
+        background-color: green;
+    }
+    .btnEdit:active{
+        background-color: #0e1133;
+    }
+    .btnDelete{
+        font-size: 18px;
+        width: 5%;
+        background-color: red;
+    }
+    .btnDelete:active{
+        background-color: #0e1133;
+    }
+}
+
+table{ 
+    table-layout: fixed; 
+    font-size: 15px;
+    th{
+        background-color: #0e1133;
+        color: white;
+        padding: 10px;
+        width: 20% ;
+        height: 12%;
+    }  
+    .thKet{
+        width: 40%;
+    }
+    td{
+        padding: 10px;
+    }
+    tr:nth-child(even) {
+        background-color: #D6EEEE;
+    }
+}
+.tbLaporan{
+    width: 100% !important;
+}
+.tableJadwal{
+    th{
+        background-color: #0e1133;
+        color: white;
+        padding: 10px;
+        width: 20%;
+    }  
+    .thTanggal{
+        width: 23%;
+    }
+}
+.cardInput{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .boxText{
+        display: flex;
+        flex-direction: row;
+        
+        h3{
+            width: 18%;
+        }
+        span{
+            width: 1%;
+        }
+        h4{
+            width: 75%;
+        }
+        .tambahDas{
+            width: 10%;
+            font-weight: bold;
+        }
+    }
+    p{
+        text-align: center;
+        font-style: italic;
+        margin-top: 10px;
+        background-color: rgb(204, 215, 226);
+    }
+}
+.boxOption{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.error, .success {
+    font-weight: 800;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.error {
+    color: red;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+.btnUpdate{
+    width: 100%;
+    background-color: blue;
+    margin-top: 10px;
+}
+.input-group{
+    display: flex;
+
+    label{
+        width: 28%;
+    }
+    .labelJadwal{
+        width: 40%;
+    }
+    span{
+        width: 2%;
+    }
+    textarea, input{
+        width: 70%;
+    }
+}
+
+
+.dropdownMenu{
+    text-align: end;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    right: 10px;
+    z-index: 1000;
+    
+    .dropdown-menu{
+        text-align: center;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        flex-direction: column;
+        background-color: rgb(171, 177, 184);
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        position: absolute;
+        right: 0px;
+    }
+}
+
+@media (min-width: 950px) {
+    .btnMenu, .tdOptionHp, .txHeaderMobile{
+        display: none;
+    }
+    .boxCard{
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 601px) and (max-width: 949px){
+    .btnMenu, .tdOptionHp, .txHeaderMobile{
+        display: none;
+    }
+    .boxCard{
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+
+        .card{
+            height: 200px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    nav, .thOption, .btnAkun, .txHeader, .txProfile{
+        display: none;
+    }
+    body, h3, a, span, h4, p, button, .btnIsi, input, select{
+        font-size: 10px;
+    }
+    .container{
+        margin-top: 10px;
+        padding: 0;
+    }
+    h1, .linkBar{
+        font-size: 15px;
+    }
+    .cardlogin{
+        width: 60% !important;
+    }
+    .dropdown-content {
+        width: 50px !important;
+        gap: 10px;
+        right: 10;
+        margin-top: 70% !important;
+        position: absolute;
+    }
+    .boxPP{
+        gap: 10px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .form-group{
+        h3, label{
+            width: 25% !important;
+        }
+    }
+    .box{
+        height: 30px;
+    }
+    .content{
+        margin-left: 0;
+        padding: 10px;
+        width: 100% !important;
+    }
+    .boxInputData{
+        margin-top: 5% !important;
+    }
+    .boxForm{
+        margin-top: 8%;
+    }
+    table{
+        font-size: 10px;
+        td, th{
+            text-align: center;
+            padding: 0;
+            width: 10%;
+        }  
+        .thLP{
+            width: 18%;
+        }
+        .thKet{
+            width: 28% !important;
+        }
+    }
+    .boxCard{
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+
+        .card{
+            height: 150px;
+        }
+    }
+    .tableJadwal{
+        font-size: 10px;
+        td, th{
+            padding: 0;
+            width: 10%;
+        }
+        .thTanggal{
+            width: 30% !important;
+        }
+    }
+
+}
+
+
+
+

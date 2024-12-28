@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <link rel="stylesheet" href="style.css">
+    <title>Daerah Rawan Banjir Di Kota Serang Banten</title>
+</head>
+<body>
+    <h1>Peta Geografis Kota Serang</h1>
+    <div class="container">
+        <div id="map"></div>
+        <div class="box">
+            <h3>Keterangan</h3>
+            <div class="content">
+                <ul>
+                    <li>
+                        <span class="orange"></span><p>Daerah Rawan Banjir</p>
+                    </li>
+                    <li>
+                        <span class="blue"></span><p>Daerah Aman Banjir</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+     <script src="leaflet.ajax.js"></script>
+
+     <script>
+        var map = L.map('map').setView([-6.12563000, 106.14999000, -0.9], 11);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var myStyle1 = {
+    "color": "blue",
+    "weight": 2,
+    "fillopacity": "white",
+    "opacity": 0.30
+    };
+
+    var myStyle2 = {
+    "color": "orange",
+    "weight": 2,
+    "opacity": 0.30
+    };
+
+    var myStyle3 = {
+    "color": "blue",
+    "weight": 2,
+    "opacity": 0.30
+    };
+
+    var myStyle4 = {
+    "color": "orange",
+    "weight": 2,
+    "opacity": 0.30
+    };
+
+    var myStyle5 = {
+    "color": "orange",
+    "weight": 2,
+    "opacity": 0.30
+    };
+
+    var myStyle6 = {
+    "color": "orange",
+    "weight": 2,
+    "opacity": 0.30
+    };
+
+    function popUp(f,l){
+    var out = [];
+    if (f.properties){
+        for(key in f.properties){
+            out.push(key+": "+f.properties[key]);
+        }
+        l.bindPopup(out.join("<br />"));
+        }
+    }
+    var jsonTest = new L.GeoJSON.AJAX(["kotaserang/id3673010_curug.geojson"],{onEachFeature:popUp, style: myStyle1}).addTo(map);
+    var jsonTest = new L.GeoJSON.AJAX(["kotaserang/id3673020_walantaka.geojson"],{onEachFeature:popUp, style: myStyle2}).addTo(map);
+    var jsonTest = new L.GeoJSON.AJAX(["kotaserang/id3673030_cipocok_jaya.geojson"],{onEachFeature:popUp, style: myStyle3}).addTo(map);
+    var jsonTest = new L.GeoJSON.AJAX(["kotaserang/id3673040_serang.geojson"],{onEachFeature:popUp, style: myStyle4}).addTo(map);
+    var jsonTest = new L.GeoJSON.AJAX(["kotaserang/id3673050_taktakan.geojson"],{onEachFeature:popUp, style: myStyle5}).addTo(map);
+    var jsonTest = new L.GeoJSON.AJAX(["kotaserang/id3673060_kasemen.geojson"],{onEachFeature:popUp, style: myStyle6}).addTo(map);
+</script>
+</html>
